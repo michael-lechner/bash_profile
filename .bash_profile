@@ -3,7 +3,6 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[\e[00;33m\]\h\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;35m\][\W]\[\e[0m\]\[\e[00;37m\]\\$ \[\e[0m\]"
 
-
 alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../../'         
@@ -18,7 +17,7 @@ alias f='open -a Finder ./'
 alias rr='rm -rf'
 
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias expressl='node_modules/.bin/express '
+alias expressl='node_modules/.bin/express -c stylus'
 alias nodem='./node_modules/.bin/nodemon'
 
 #Change into directory after creation
@@ -35,8 +34,8 @@ function m(){
   git add . -A
   if [ -z "$1" ]
     then
-      N=0
-      COMMITS=('Theme development' 'Module development' 'Upgrades' 'Misc development work')
+      N=-1
+      COMMITS=('Theme development' 'Module development' 'Upgrades' 'Misc development work' 'First Commit')
       for i in "${COMMITS[@]}"
       do
         N=`expr $N + 1`
