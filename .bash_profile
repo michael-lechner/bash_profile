@@ -28,6 +28,7 @@ cd() { builtin cd "$@"; ll; }
 
 #git aliases
 alias up_master="git push origin master"
+alias down_master="git pull origin master"
 
 #lazy git commit
 function m(){
